@@ -58,7 +58,7 @@ const EditUser: FC = () => {
 
   const getUserDetails = async (id: string | string[]) => {
     try {
-      const response = await axios.get(`/api/user?userId=${id}`);
+      const response = await axios.get(`/api/user?${userId}`);
       const userData = response.data?.data;
       if (userData) {
         setUser({
